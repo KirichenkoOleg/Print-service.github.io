@@ -1,124 +1,85 @@
 .header {
-    padding: 80px 0;
-    // background: url('../img/bg-headerPjpeg.jpg') no-repeat center / cover fixed;
-    height: 100vh;
-    @media screen and (max-width:$md) {
-        padding: 30px 0;
-    }
-    @media screen and (max-width:$sm) {
+    
+    &__wrapperLog {
+        width: 100%;
         padding: 20px 0;
-    }
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-    &__logo {
-        width: 195px;
-    }
-    &__footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__title {
-        margin-bottom: 20px;
-    }
-
-    &__more {
-        margin-bottom: 50px;
-        transition-duration: .3s;
-        &:hover {
-            background-color: #ada074;
-        }
-        @media screen and (max-width:$sx) {
-            margin: 0;
-        }
-    }
-    &__arrow-down {
-        padding: 0px 15px;
-        color: #ffffff;
-        transition-duration: .1s;
+        background-color: #ffffff;
         position: relative;
-        &:hover {
-            transform: scale(1.5);
-        }
-        svg {
-            fill: #ffffff;
-            width: 14px;
-        }
-        @media screen and (max-width:$sx) {
-            display: none;
-        }
-    }
-}
-.title {
-    padding: 0 0 35px 0;
-    font-size: $blockTitle-size;
-    font-family: $primary-font;
-    text-transform: uppercase;
-    letter-spacing: 8px;// отступ между буквами
-    line-height: 1.2;
-    text-align: center;
-    position: relative;
-    @media screen and (max-width:$md) {
-        font-size: 28px;
-    }
-    @media screen and (max-width:$sm) {
-        font-size: 20px;
-        padding: 25px;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 80px;
-        height: 1px;
-        background-color: #000000;
-        transform: translateX(-50%);
-    }
-
-    &_primary {
-        padding: 0 0 45px 0;
-        color: #ffffff;
         &::after {
-            height: 2px;
-            background-color: #ffffff;
-        }
-        @media screen and (max-width:$sm) {
-            padding-bottom: 25px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 10px 13px 0px rgba(233, 233, 233, .65);
+            border-radius: 50%;
+            z-index: -1;
         }
     }
 
-    &__subtitle {
-        font-size: 26px;
-        font-weight: normal;
-        text-transform: lowercase;
-        font-family: $text-font;
-        @media screen and (max-width:$md) {
-            font-size: 18px;
-        }
-        @media screen and (max-width:$sm) {
-            font-size: 16px;
-        }
+    &__menu-logIn {
+        // border: 1px dotted crimson;
     }
 }
-.btn-more {
-    padding: 15px 40px;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: $text-font;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid #ffffff;
-    &_b {
-        color: #000000;
-        border-color: #000000;
+
+.menu-logIn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    &__section-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
+    &__phone {
+        font-size: 21px;
+        font-family: $primary-font;
+        color: #000000;
+    }
+    &__time {
+        font-size: 12px;
+        font-family: $secondary-font;
+        color: #949494;
+    }
+
+    &__section-center {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__contactUs {
+        padding: 10px 50px;
+        border: 1px solid #7c6aa2;
+        border-radius: 20px;
+        span {
+            font-size: 18px;
+            font-family: $secondary-font;
+            color: #000000;
+            border-bottom: 1px dotted #000000;
+            cursor: pointer;
+        }
+    }
+
+    &__section-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__cabText {
+        font-size: 18px;
+        font-family: $primary-font;
+        color: #000000;
+        margin-bottom: 5px;
+    }
+    &__logIn {
+        font-size: 12px;
+        font-family: $secondary-font;
+        color: #0e81b5;
+        text-decoration: none;
+        border-bottom: 1px dotted #0e81b5;
+    }
+
 }

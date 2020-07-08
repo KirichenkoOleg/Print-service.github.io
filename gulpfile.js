@@ -44,7 +44,7 @@ function css() {
 		.pipe(sourcemaps.init()) // активация sourcemaps
 		.pipe(sass().on('error', sass.logError))
 		.pipe(concat('style.css'))
-		.pipe(cleanCSS())
+		// .pipe(cleanCSS())
 		.pipe(sourcemaps.write()) // активация sourcemaps
 		.pipe(dest(path.build.css))
 		.pipe(reload({
